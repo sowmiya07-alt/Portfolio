@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sowmiya Portfolio.html</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f2f5f7;
+            color: #222;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4158f6, #6a8bff);
+            padding: 70px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 48px;
+        }
+
+        header h2 {
+            font-size: 22px;
+            margin-top: 8px;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4b72fa;
+        }
+
+        section {
+            padding: 70px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #4b72fa;
+            margin-bottom: 20px;
+        }
+
+        .about-box,
+        .skill-box,
+        .edu-card,
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .edu-card {
+            border-left: 6px solid #4b72fa;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #4b72fa;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.9s ease;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sowmiya S. B</h1>
+        <h2>Aspiring Software Developer | Tech Enthusiast</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="fade">
+        <h2>About Me</h2>
+        <div class="about-box">
+            <p>
+                I am <b>Sowmiya S. B</b>, a passionate and self-driven Computer Science Engineering
+                student at <b>KSR College of Engineering</b>. I love building digital solutions,
+                learning new technologies, and working on creative software projects.
+                <br /><br />
+                My goal is to grow into a skilled full-stack developer and contribute to
+                impactful tech innovations.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="fade">
+        <h2>Technical Skills</h2>
+
+        <div class="skill-box"><b>Programming:</b> Python, C, Java</div>
+        <div class="skill-box"><b>Web Development:</b> HTML, CSS, JavaScript, React</div>
+        <div class="skill-box"><b>Tools:</b> Excel, Power BI</div>
+        <div class="skill-box"><b>Other Skills:</b> Problem Solving, Debugging, Teamwork</div>
+    </section>
+
+    <section id="projects" class="fade">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Aqua Scan – Intelligent Fish Analysis System</h3>
+            <p>
+                Aqua Scan is a smart system where users upload a fish image, and the
+                model identifies the species, detects health issues, and estimates the
+                weight and size using machine learning and image processing.
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="fade">
+        <h2>Education</h2>
+
+        <div class="edu-card">
+            <h3>KSR College of Engineering</h3>
+            <p>B.E. Computer Science Engineering</p>
+            <p><b>CGPA:</b> 8.81</p>
+        </div>
+
+        <div class="edu-card">
+            <h3>PM Shri Kendriya Vidyalaya</h3>
+            <p>HSC – Completed</p>
+        </div>
+    </section>
+
+    <section id="contact" class="fade">
+        <h2>Contact</h2>
+
+        <div class="about-box">
+            <p>📧 Email: <b>sowmiya.sb@example.com</b></p>
+            <p>🔗 LinkedIn: <a href="https://linkedin.com/in/sowmiyaportfolio" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/sowmiyaportfolio</a></p>
+            
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Sowmiya Portfolio | All Rights Reserved
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll('.fade');
+
+        function showElements() {
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', showElements);
+        window.addEventListener('load', showElements);
+    </script>
+</body>
+</html>
